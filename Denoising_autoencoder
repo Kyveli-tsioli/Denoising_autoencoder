@@ -355,9 +355,6 @@ def training(model,train_loader,valid_loader,epochs):
   plt.title("Loss per epochs")
   plt.show()
   
-  #trial#
-  #reshaped_valid_output = output_valid.reshape(200, 28, 28)
-
 
 
  
@@ -395,8 +392,8 @@ def training(model,train_loader,valid_loader,epochs):
       
     test_images_list.append(image_list)
     print("length",len(image_list))
-  print(np.array(test_images_list).shape)
-  for l in range(len(test_images_list)):
+   print(np.array(test_images_list).shape)
+   for l in range(len(test_images_list)):
     fig = plt.figure(figsize=(20., 20.))
     grid = ImageGrid(fig, 111,  
                   nrows_ncols=(8, 3),  
@@ -409,8 +406,7 @@ def training(model,train_loader,valid_loader,epochs):
 
     plt.show()
 
-  #image,label=sample accessing each item in a sequence using an index
-  #sequence unpacking
+ 
 
-trial1=training(model,trainloader,validloader,epochs)
+trial=training(model,trainloader,validloader,epochs)
 
